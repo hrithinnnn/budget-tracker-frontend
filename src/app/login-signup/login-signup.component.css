@@ -1,0 +1,15 @@
+.dark-mode{
+    color:white;
+}
+
+#container-log{
+    display: flex;
+    height: 45vw;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-drawer-content{height:auto;
+
+    height: 100%;}

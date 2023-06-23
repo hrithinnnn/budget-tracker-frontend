@@ -1,0 +1,23 @@
+<div class="container" id="container-pw">
+    <h1>Change Password</h1>
+
+<mat-form-field class="example-full-width">
+    
+    <mat-label>email</mat-label>
+    <input type="text" name="email" matInput [(ngModel)]="email">
+    <!-- <app-edit-transaction [title1]='title' hidden></app-edit-transaction> -->
+</mat-form-field><br>
+<mat-form-field class="example-full-width">
+    <mat-label>old Password</mat-label>
+    <input type="password" name="title" matInput [(ngModel)]="oldPassword">
+    <!-- <app-edit-transaction [title1]='title' hidden></app-edit-transaction> -->
+</mat-form-field><br>
+<mat-form-field class="example-full-width">
+    <mat-label>new password</mat-label>
+    <input type="password" name="title" matInput [(ngModel)]="newPassword">
+    <!-- <app-edit-transaction [title1]='title' hidden></app-edit-transaction> -->
+</mat-form-field><br>
+<mat-error *ngIf="error">enter all fields</mat-error>
+<button mat-raised-button color="primary" type="button" (click)="submit()">Change Password</button>
+<!-- <button mat-raised-button color="primary" type="button" (click)="deleteAccount()">delete account</button> -->
+</div>

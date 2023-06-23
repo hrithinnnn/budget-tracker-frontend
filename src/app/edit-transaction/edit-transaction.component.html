@@ -1,0 +1,40 @@
+<div id="container-edit">
+    <h1>Edit Transaction</h1>
+<form class="example-form">
+    <div fxLayout="column" fxLayoutAlign=" start" fxLayoutGap="20px">
+        <div fxLayout="row" fxLayoutAlign=" start" fxLayoutGap="20px">
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Title</mat-label>
+                <input matInput name="title" [(ngModel)]="title" value="{{title}}">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>amount</mat-label>
+                <input name="amount" [(ngModel)]="amount" matInput type="number" value="{{amount}}">
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign=" start" fxLayoutGap="20px">
+            <!-- <mat-form-field>
+                <mat-label>type</mat-label>
+                <mat-select name="type" [(ngModel)]="type" value="{{type}}">
+                    <mat-option *ngFor="let option of options" [value]="option.value">
+                        {{option.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field> -->
+
+
+            <mat-form-field>
+                <mat-label>Choose a date</mat-label>
+                <input matInput (dateChange)="fn($event)" [matDatepicker]="picker" value="{{object.date}}">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <!-- #somename inside html is template variable, can be used directly -->
+            </mat-form-field>
+        </div>
+    </div>
+    <mat-error *ngIf="error">enter all fields</mat-error>
+    <button mat-raised-button color="primary" type="button" (click)="edit()">edit</button>
+</form>
+</div>

@@ -1,0 +1,11 @@
+<div class="container" id="container-del">
+<h1>Delete Account</h1>
+<mat-form-field class="example-full-width">
+  
+    <mat-label>type delete to delete account</mat-label>
+    <input typer="text" name="delete" matInput [(ngModel)]="del">
+    <!-- <app-edit-transaction [title1]='title' hidden></app-edit-transaction> -->
+</mat-form-field><br>
+<mat-error *ngIf="error">does not match "delete"</mat-error><br>
+<button mat-raised-button color="primary" type="button" (click)="deleteAccount()">delete</button>
+</div>

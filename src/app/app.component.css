@@ -1,0 +1,151 @@
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+    background-image: url(../assets/black.jpg);
+}
+
+#app-body {
+    background-color: #000000;
+}
+
+
+.switch {
+    position: fixed;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 20px;
+    margin-right: 1rem;
+    right: 0;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    /* background-image: url(../../../public/darkmodeswitch.png); */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+    border: black 1px solid;
+}
+
+input:checked+.slider {
+    background-color: gray;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px gray;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: #000;
+    /* background-image: url(../../../public/lightmodeswitch.png); */
+
+}
+/* .mat-drawer-container{
+    background-color: #ffffff;
+    color: rgba(0,0,0,.87);
+    } */
+
+    .mat-drawer-container {
+        background-color: #fafafa;
+        color: rgba(0,0,0,.87);
+    }
+
+    .actions {
+        display: inline-block;
+        position: relative;
+        color: #70777a;
+      }
+      
+      .actions::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #70777a;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+      
+      .actions:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+        
+      }
+      .actions:hover{
+        cursor: pointer;
+      }
+    .side-btn:hover{
+        cursor: pointer;
+        background-color: rgb(109, 107, 107);
+        
+    }
+    .side-btn{
+        text-align: center;
+        border-bottom: 1px #000 solid;
+        height:7%;
+        
+    }
+   

@@ -1,0 +1,88 @@
+<div id="btn" style="position: fixed; top:0; left:0;" style="margin-top:10px; margin-left:10px;margin-right:10px; text-align: left;">
+    enable dark mode: <section class="example-section">
+        <mat-slide-toggle class="example-margin" [(ngModel)]="checked" (change)="toggleDarkMode()">
+        </mat-slide-toggle>
+      </section>
+</div>
+<div id="container-log" >
+    <form class="mat-elevation-z6" style="width:300px; margin: 20px; border-radius: 10px; border:solid black; padding: 20px;" (submit)="submit()">
+        <h1>Welcome, User!</h1>
+        <mat-form-field *ngIf="!logIn" appearance="fill" >
+            <mat-label>Enter your name</mat-label>
+            <input [(ngModel)]="name" matInput name="name">
+            <!-- <mat-error *ngIf="(isSubmitted || isNameTouched) && getControl('name')?.hasError('required')"> -->
+                <!-- Pleas enter a name -->
+            <!-- </mat-error> -->
+        </mat-form-field>
+
+        <mat-form-field *ngIf="!logIn" appearance="fill">
+            <mat-label>Enter your role</mat-label>
+            <input matInput formControlName="role">
+            <!-- <mat-error *ngIf="(isSubmitted || isRoleTouched) && getControl('role')?.hasError('required')"> -->
+                <!-- Please enter a role -->
+            <!-- </mat-error> -->
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your email</mat-label>
+            <input type="text" [(ngModel)]="email" name="email" matInput name="email">
+            <!-- <mat-error *ngIf="(isSubmitted || isEmailTouched) && getControl('email')?.hasError('required')">
+                Please enter your email
+            </mat-error> -->
+            <!-- <mat-error *ngIf="(isSubmitted || isEmailTouched) && !getControl('email')?.hasError('required') && getControl('email')?.hasError('email')">
+                Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="isSubmitted && emailExists && !logIn">
+                PUser already exists! Please login.
+            </mat-error> -->
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your password</mat-label>
+          <input [(ngModel)]="password" matInput type="password" name="password">
+          <!-- <mat-error *ngIf="(isSubmitted || isPasswordTouched) && getControl('password')?.hasError('required')">
+            Please enter a password
+        </mat-error> -->
+        </mat-form-field><br>
+
+        <mat-error *ngIf="credError">
+            Enter Credentials Properly
+        </mat-error>
+
+        <button type="submit" mat-button style="background-color: black; color: white; margin-right: 20px;">{{ logIn ? 'Log In' : 'Sign Up' }}</button>
+        
+        <div mat-button (click)="togglePage()" style="cursor: pointer; text-decoration: underline; margin-top: 10px;">{{ logIn ? 'Create an account!' : 'Log In'}}</div>
+    </form>
+
+</div>
+
+
+
+
+
+<!-- <div *ngIf="!this.logIn" style="width: 300px; margin: 20px;" fxLayout="column" fxLayoutGap="10px">
+    <h1>Sign Up</h1>
+
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="John appleseed">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="John@gmail.com">
+        </mat-form-field>
+    </div>
+
+
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Role</mat-label>
+            <input matInput placeholder="manager">
+        </mat-form-field>
+    </div>
+    <button (click)="toggle()" mat-button style="background-color: black; color: white;">Register</button> 
+
+</div> -->

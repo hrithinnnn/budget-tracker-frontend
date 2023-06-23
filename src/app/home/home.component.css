@@ -1,0 +1,142 @@
+/* Set color scheme */
+body {
+    background-color: white;
+    color: black;
+  }
+  
+
+
+  
+  /* Align form */
+  .example-form {
+    border: 1px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Align reports div to bottom */
+  /* .fxLayoutAlign {
+    justify-content: flex-end;
+  } */
+  
+  /* Apply color scheme to buttons */
+  button[type="button"],
+  button[type="submit"] {
+    /* background-color: red; */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Apply color scheme to mat-select */
+
+  
+  /* Apply color scheme to mat-list-item */
+
+  
+  /* Align and style the expense/income divs */
+
+
+
+
+  /* Align and style the report divs */
+
+  
+
+
+  /* .report{
+    position: fixed;
+    bottom: 0;
+    width:100vw;
+  } */
+
+
+
+  .expense-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 50px;
+  }
+  
+  .expense-container div {
+    /* width: 25%; */
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .expense-container div h2 {
+    margin-top: 0px;
+  }
+  
+  .numbers {
+    font-size: 2em;
+    margin: 0px;
+  }
+  
+input{
+    border: solid gray;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.income,
+.expense {
+  width: 45%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: scroll;
+  max-height: 20vw;
+}
+
+.income h2,
+.expense h2 {
+  margin-top: 0px;
+}
+
+.income-list,
+.expense-list {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.income-list li,
+.expense-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+  border-bottom: 1px solid #ccc;
+}
+
+.income-list li:last-child,
+.expense-list li:last-child {
+  border-bottom: none;
+}
+
+.income-list li .delete-btn,
+.expense-list li .delete-btn {
+  color: red;
+  cursor: pointer;
+}
+
+.net-expenses-container {
+  margin-top: 20px;
+  text-align: center;
+}
+.title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btns:hover{
+  cursor: pointer;
+}
